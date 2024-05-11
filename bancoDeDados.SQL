@@ -9,7 +9,7 @@ CREATE TABLE "user" (
   "cpf" BIGINT
 );
 
-CREATE TABLE "manuais" (
+CREATE TABLE "tarefas" (
   "id" SERIAL PRIMARY KEY,
   "leitura" VARCHAR(100),
   "id_user" INTEGER,
@@ -31,12 +31,12 @@ CREATE TABLE "manual" (
   "versao" VARCHAR(50),
   "descricao" VARCHAR(900),
   "id_aparelhos" INTEGER,
-  "id_tarefas" INTEGER,
+  "id_materiais" INTEGER,
   FOREIGN KEY ("id_aparelhos") REFERENCES "aparelhos" ("id"),
-  FOREIGN KEY ("id_tarefas") REFERENCES "id_tarefas" ("id")
+  FOREIGN KEY ("id_materiais") REFERENCES "id_materiais" ("id")
 );
 
-CREATE TABLE "tarefas" (
+CREATE TABLE "materiais" (
   "id" SERIAL PRIMARY KEY,
   "tipo" VARCHAR(100),
   "arquivo" VARCHAR(100),
