@@ -63,7 +63,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="353" y="103" name="manuais">
+<table x="353" y="103" name="tarefas">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
