@@ -1,4 +1,4 @@
--- Table 'user'
+
 CREATE TABLE "user" (
   "id" SERIAL PRIMARY KEY,
   "nome" VARCHAR(100),
@@ -9,7 +9,6 @@ CREATE TABLE "user" (
   "cpf" BIGINT
 );
 
--- Table 'manuais'
 CREATE TABLE "manuais" (
   "id" SERIAL PRIMARY KEY,
   "leitura" VARCHAR(100),
@@ -19,7 +18,6 @@ CREATE TABLE "manuais" (
   FOREIGN KEY ("id_manual") REFERENCES "manual" ("id")
 );
 
--- Table 'aparelhos'
 CREATE TABLE "aparelhos" (
   "id" SERIAL PRIMARY KEY,
   "nome" VARCHAR(100),
@@ -28,7 +26,6 @@ CREATE TABLE "aparelhos" (
   "ano" INTEGER
 );
 
--- Table 'manual'
 CREATE TABLE "manual" (
   "id" SERIAL PRIMARY KEY,
   "versao" VARCHAR(50),
@@ -39,7 +36,6 @@ CREATE TABLE "manual" (
   FOREIGN KEY ("id_materiais") REFERENCES "materiais" ("id")
 );
 
--- Table 'materiais'
 CREATE TABLE "materiais" (
   "id" SERIAL PRIMARY KEY,
   "tipo" VARCHAR(100),
