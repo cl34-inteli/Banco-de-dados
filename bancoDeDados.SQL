@@ -31,12 +31,12 @@ CREATE TABLE "manual" (
   "versao" VARCHAR(50),
   "descricao" VARCHAR(900),
   "id_aparelhos" INTEGER,
-  "id_materiais" INTEGER,
+  "id_tarefas" INTEGER,
   FOREIGN KEY ("id_aparelhos") REFERENCES "aparelhos" ("id"),
-  FOREIGN KEY ("id_materiais") REFERENCES "materiais" ("id")
+  FOREIGN KEY ("id_tarefas") REFERENCES "id_tarefas" ("id")
 );
 
-CREATE TABLE "materiais" (
+CREATE TABLE "tarefas" (
   "id" SERIAL PRIMARY KEY,
   "tipo" VARCHAR(100),
   "arquivo" VARCHAR(100),
